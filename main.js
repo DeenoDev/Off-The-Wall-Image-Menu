@@ -1,7 +1,7 @@
 const nav = document.getElementById("nav");
 
 for(const link of nav.getElementsByTagName("a")) {  
-  link.onmousemove = e => {
+  link.onmouseover = e => {
     const rect = link.getBoundingClientRect(),    
           img = link.querySelector("img");
     
@@ -10,7 +10,7 @@ for(const link of nav.getElementsByTagName("a")) {
   }
 }
 
-window.onmousemove = e => {
+window.onmouseover = e => {
   const percent = e.clientY / window.innerHeight;
   
   nav.animate({
